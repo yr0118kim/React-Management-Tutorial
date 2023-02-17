@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+#database
+/database.json
+
+#upload
+/upload
+
 # testing
 /coverage
 
