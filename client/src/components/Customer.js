@@ -1,19 +1,20 @@
 import React from "react";
 import { TableRow ,TableCell} from '@mui/material';
-function Customer(props){
-    return(
-        <>
-        <TableRow>
-            <TableCell>{props.id}</TableCell>
-            <TableCell><img src={props.image} alt="profile"></img></TableCell>
-            <TableCell>{props.name}</TableCell>
-            <TableCell>{props.birthday}</TableCell>
-            <TableCell>{props.gender}</TableCell>
-            <TableCell>{props.job}</TableCell>
-        </TableRow>
-
-        </>
-    )
+import CustomerDelete from './CustomerDelete';
+class Customer extends React.Component{
+    render(){
+        return(
+            <TableRow>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell><img src={this.props.image} alt="profile"></img></TableCell>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell>{this.props.birthday}</TableCell>
+                <TableCell>{this.props.gender}</TableCell>
+                <TableCell>{this.props.job}</TableCell>
+                <TableCell><CustomerDelete stateRefresh={this.props.stateRefresh} id={this.props.id}/></TableCell>
+            </TableRow>
+        )
+    }
 }
 function CustomerInfo(props){
     return(
